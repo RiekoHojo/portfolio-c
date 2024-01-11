@@ -26,7 +26,8 @@ hr {
 
 .main-contents-holder {
   margin-bottom: 100px;
-  min-width: 1920px;/*1536px*/
+  background-color: #FFF;
+  /*min-width: 1920px;/*1536px*/
 }
 
 .main-contents-header {
@@ -41,6 +42,10 @@ hr {
 .top-nav {
   display: flex;
   justify-content: center;
+}
+
+.top-nav-sp {
+  display: none;
 }
 
 .top-nav li {
@@ -64,6 +69,10 @@ hr {
   margin: 0 7px;
 }
 
+.top-hamburger {
+  display: none;
+}
+
 .main-contents-main {
   width: 100%;
   padding-top: 200px;
@@ -72,11 +81,26 @@ hr {
   align-items: center;
 }
 
+.main-contents-top {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mainimg {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  object-position: center 80%;
+}
+
 .main-contents-wrap {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 65%;
+  width: 100%;
+  align-items: center;
 }
 
 .main-contents-title {
@@ -100,18 +124,21 @@ hr {
 }
 
 .main-contents-box {
-  display: flex;
+ /*display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: center;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 
 .main-contents-imgbox {
-  width: 50%;
-  padding-bottom: 50px;
+  width: 459px;
 }
 
 .main-contents-img {
+  width: 459px;
   border-radius: 40px;
 }
 
@@ -121,11 +148,11 @@ hr {
   padding: 3px 0 3px;
 }
 
-.main-contents-subtitle,
+/*.main-contents-subtitle,
 .main-contents-img,
 .main-contents-subtext {
   max-width: 459px;
-}
+}*/
 
 .main-contents-subtitle {
   padding-bottom: 20px;
@@ -176,8 +203,121 @@ hr {
 }
 
 
-@media (max-width: 1240px) {
-  .no-scroll {
-    /*spのnav記載時に書く*/
+@media (max-width: 767px) {
+  main {
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
+  .main-contents-holder {
+    background-color: #FFF;
+  }
+  .main-contents-header {
+    display: flex;
+    justify-content: center;
+  }
+  .top-icon {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .top-icon img {
+    width: 16px;
+    height: 16px;
+    margin: 0 10px 0 0px;
+  }
+  .main-contents-top {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .mainimg {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: center 80%;
+  }
+  .main-contents-wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .no-scroll {
+    overflow: hidden;
+    height: 100%;
+  }
+  .top-nav {
+    display: none;
+  }
+  .top-hamburger {
+    display: block;
+    background-color: transparent;
+    position: absolute;
+    cursor: pointer;
+    margin: 50px 0 0 auto;
+    height: 20px;
+    width: 20px;
+    right: 10px;
+    transform: translateX(0);
+  }
+  .top-hamburger-icon {
+    display: inline-block;
+    width: 20px;
+    height: 22px;
+    color: black;
+    vertical-align: middle;
+    cursor: pointer;
+    position: fixed;
+    top: 0px;
+    right: 20px;
+    z-index: 100;
+    transition: all .5s;
+  }
+  .top-hamburger-icon.active {
+    transform: translateX(30px);
+  }
+  .top-hamburger-icon span {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-radius: 10px;
+    background-color: #000;
+    border-width: 5px;
+    transition: all .5s;
+  }
+  .top-hamburger-icon span:nth-of-type(1) {
+    top: 2px; 
+  }
+  .top-hamburger-icon span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .top-hamburger-icon span:nth-of-type(3) {
+    bottom: 2px;
+  }
+  .top-hamburger-icon.active span:nth-of-type(1),
+  .top-hamburger-icon.active span:nth-of-type(3) {
+    top: 10px; 
+    transform: rotate(45deg);
+  }
+  .top-hamburger-icon.active span:nth-of-type(3) {
+    transform: rotate(-45deg);
+  }
+  .top-hamburger-icon.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .main-contents-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
 }
