@@ -229,25 +229,33 @@ hr {
 }
 
 @media (max-width: 767px) {
+  .main-contents-title {
+    font-size: 6vw;
+  }
   .main-contents-holder {
     background-color: rgb(54, 255, 51);
     margin: 0;
-    width: 767px;
+    width: 100%;
   }
   .main-contents-header {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    padding-bottom: 50px;
   }
   .main-contents-main {
     width: 100%;
-    padding-top: 100px;
+    padding-top: 65px;
     display: flex;
     justify-content: center;
   }
+  .main-contents-mainimg {
+    height: 350px;
+    padding-top: 60px;
+  }
   .mainimg {
-    width: 100%;
-    height: 449px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center 80%;
     min-width: 0px;
@@ -270,7 +278,6 @@ hr {
   .main-contents-text.space {
     padding: 20px;
     padding: 10px 10px 20px;
-    height: ;
   }
   .main-contents-img {
     width: 100%;
@@ -295,18 +302,19 @@ hr {
     margin-top: 60px;
   }
   .top-icon img {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     margin: 0 20px 0 0px;
   }
   .top-nav {
     display: none;
   }
   .top-hamburger {
+    display: block;
     background-color: transparent;
     position: absolute;
     cursor: pointer;
-    margin: 50px 0 0 auto;
+    margin: 150px 0 0 auto;
     height: 20px;
     width: 20px;
     right: 10px;
