@@ -20,6 +20,7 @@ br {
   margin-bottom: 100px;
   background-color: #FFF;
   width: 100%;
+  max-width: 1920px;
 }
 
 .main-contents-header {
@@ -222,16 +223,13 @@ hr {
   }
   .mainimg {
     width: 980px;
-    height: 449px;
+    height: 450px;
     object-fit: cover;
     object-position: center 80%;
   }
 }
 
 @media (max-width: 767px) {
-  .main-contents-title {
-    font-size: 6vw;
-  }
   .main-contents-holder {
     background-color: rgb(54, 255, 51);
     margin: 0;
@@ -241,27 +239,23 @@ hr {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding-bottom: 50px;
   }
   .main-contents-main {
     width: 100%;
-    padding-top: 65px;
     display: flex;
     justify-content: center;
-  }
-  .main-contents-mainimg {
-    height: 350px;
-    padding-top: 60px;
+    padding-top:  150px;
   }
   .mainimg {
     max-width: 100%;
-    height: auto;
+    height: 390px;
     object-fit: cover;
     object-position: center 80%;
     min-width: 0px;
   }
   .main-contents-wrap {
     max-width: 100%;
+    padding: 0 30px;
   }
   .main-contents-box {
     display: flex;
@@ -275,13 +269,32 @@ hr {
   .main-contents-textbox {
     width: 100%;
   }
+  .main-contents-title {
+    font-size: 6vw;
+    letter-spacing: 7px;
+    padding: 100px 0 35px;
+  }
+  .main-contents-text {
+    font-size: 3vw;
+    letter-spacing: 6px;
+    line-height: 1.6em;
+    padding: 0 0 200px;
+  }
   .main-contents-text.space {
+    letter-spacing: 6px;
+    line-height: 2em;
     padding: 20px;
     padding: 10px 10px 20px;
   }
   .main-contents-img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 80px;
+  }
+  .main-contents-subtitle {
+    font-size: 5vw;
+  }
+  .main-contents-subtext {
+    font-size: 3vw;
   }
   .main-contents-infobox {
     width: 100%;
