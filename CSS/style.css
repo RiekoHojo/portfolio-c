@@ -20,7 +20,6 @@ br {
   margin-bottom: 100px;
   background-color: #FFF;
   width: 100%;
-  max-width: 1920px;
 }
 
 .main-contents-header {
@@ -231,7 +230,6 @@ hr {
 
 @media (max-width: 767px) {
   .main-contents-holder {
-    background-color: rgb(54, 255, 51);
     margin: 0;
     width: 100%;
   }
@@ -247,7 +245,7 @@ hr {
     padding-top:  150px;
   }
   .mainimg {
-    max-width: 100%;
+    width: 100%;
     height: 390px;
     object-fit: cover;
     object-position: center 80%;
@@ -274,11 +272,17 @@ hr {
     letter-spacing: 7px;
     padding: 100px 0 35px;
   }
+  .main-contents-title.padding {
+    padding: 300px 0 90px;
+  }
+  .main-contents-title.padding2 {
+    padding: 300px 0 90px;
+  }
   .main-contents-text {
     font-size: 3vw;
     letter-spacing: 6px;
     line-height: 1.6em;
-    padding: 0 0 200px;
+    padding: 0 0 180px;
   }
   .main-contents-text.space {
     letter-spacing: 6px;
@@ -286,24 +290,52 @@ hr {
     padding: 20px;
     padding: 10px 10px 20px;
   }
+  .main-contents-images {
+    display: flex;
+    flex-direction: column;
+  }
   .main-contents-img {
-    width: 100%;
-    border-radius: 80px;
+    width: 80%;
+    border-radius: 60px;
+    order: 2;
+    margin-left: 50px;
   }
   .main-contents-subtitle {
     font-size: 5vw;
+    padding-bottom: 10px;
   }
   .main-contents-subtext {
     font-size: 3vw;
+    order: 1;
+    padding-bottom: 10px;
   }
   .main-contents-infobox {
     width: 100%;
   }
+  .main-contents-info {
+    display: block;
+  }
+  .main-contents-infobox > li.main-contents-info:not(:first-child) {
+    margin-top: 80px;
+  }
+  .main-contents-infotext {
+    font-size: 4vw;
+    padding-bottom: 10px;
+  }
+  .main-contents-infodate {
+    font-size: 3.5vw;
+    padding-bottom: 20px;
+  }
   .main-contents-fotter {
     width: 100%;
+    height: 330px;
   }
   .bottom-nav {
     width: 100%;
+  }
+  .bottom-nav li {
+    font-size: 4vw;
+    padding-top: 40px;
   }
   /*.no-scroll {
     overflow: hidden;
@@ -312,7 +344,7 @@ hr {
   .top-icon {
     display: flex;
     justify-content: flex-end;
-    margin-top: 60px;
+    margin-top: 40px;
   }
   .top-icon img {
     width: 35px;
@@ -327,7 +359,7 @@ hr {
     background-color: transparent;
     position: absolute;
     cursor: pointer;
-    margin: 150px 0 0 auto;
+    margin: 120px 0 0 auto;
     height: 20px;
     width: 20px;
     right: 10px;
