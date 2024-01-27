@@ -1,12 +1,15 @@
 console.log("test")
 
-/*$(".top-hamburger-icon").on('click', function(){
-  if($(this).hasClass('active')){
-    $('.top-nav-sp').removeClass('open');
-    $(this).removeClass('active');
-  } else {
-    $('.top-nav-sp').addClass('open');
-    $(this).addClass('active');
-  }
-});*/
+$(".top-hamburger-icon").on('click', function(){
+    if($(this).hasClass('active')){
+      $(this).removeClass('active');
+      $('.top-nav-sp').removeClass('open');
+      $('body').removeClass('no-scroll'); 
+    } else {
+      $(this).addClass('active');
+      $('.top-nav-sp').addClass('open');
+      $('body').addClass('no-scroll');
+    }
+  });
+  
 
