@@ -263,6 +263,8 @@ hr {
   }
   .main-contents-imgbox {
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
   .main-contents-textbox {
     width: 100%;
@@ -293,10 +295,10 @@ hr {
     padding: 20px;
     padding: 10px 10px 20px;
   }
-  .main-contents-images {
+  /*.main-contents-images {
     display: flex;
     flex-direction: column;
-  }
+  }*/
   .main-contents-img {
     width: 80%;
     border-radius: 60px;
