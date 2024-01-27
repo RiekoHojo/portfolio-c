@@ -459,9 +459,9 @@ hr {
     border-radius: 50%;
     position: fixed;
     padding: 30px;
-    bottom: 20px;
+    bottom: 60px;
     margin-right: 20px;
-    background-color: #888;
+    background-color: #fff;
     z-index: 1000;
     right: 0;
     border: 0.5px solid #000; 
