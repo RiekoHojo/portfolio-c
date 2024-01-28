@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="CHOCOLATE TOKYO">
     <title>『CHOCOLATE TOKYO』日本の伝統的な味わいと今を生きる東京の雰囲気を融合した、独創的でモダンなチョコレートをお楽しみいただけます。</title>
+    <!--js-->
+    <link href="JS/main.js" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <!--css-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
@@ -13,12 +17,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@800&display=swap" rel="stylesheet">
-    <!--js-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
-    <link href="JS/main.js" rel="stylesheet">
   </head>
-  <body class="body no-scroll">
+  <body class="body">
     <nav>
       <ul class="top-nav-sp">
         <li class="top-nav-item">HOME</li>
@@ -50,7 +50,12 @@
             <img src="images/header_icon2.png">
           </a>
         </div>
-        <div class="top-language"></div><!--後-->
+        <div class="top-language">
+          <div class="selected-language">JA</div>
+          <ul class="top-language-box">
+            <li class="top-language-box-item">EN</li>
+          </ul>
+        </div>
 
         <div class="top-hamburger">
           <div class="top-hamburger-icon">
@@ -64,10 +69,14 @@
       <main class="main-contents-main">
         <div class="main-contents-top">
           <div class="main-contents-mainimg">
-            <img class="mainimg" src="images/top1.png">
+            <ul class="slider">
+              <li class="mainimg slider-item01"></li>
+              <li class="mainimg slider-item02"></li>
+              <li class="mainimg slider-item03"></li>
+              </ul>
           </div>
           <div class="main-contents-btn">
-          </div><!--後-->
+          </div>
         </div>
 
         <section class="main-contents-wrap">
