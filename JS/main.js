@@ -5,10 +5,12 @@ $(".top-hamburger-icon").on('click', function(){
   if($(this).hasClass('active')){
     $(this).removeClass('active');
     $('.top-nav-sp').removeClass('open');
+    $('.top-language-sp').removeClass('open'); // top-language-spの表示切り替え
     $('body').removeClass('no-scroll'); 
   } else {
     $(this).addClass('active');
     $('.top-nav-sp').addClass('open');
+    $('.top-language-sp').addClass('open'); // top-language-spの表示切り替え
     $('body').addClass('no-scroll');
   }
 });
