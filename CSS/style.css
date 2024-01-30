@@ -309,6 +309,11 @@ hr {
   background-size: cover;/
 }
 
+.slider .mainimg {
+  background-size: cover;
+  background-position: center;
+}
+
 /*矢印の設定*/
 .slick-prev, 
 .slick-next {
