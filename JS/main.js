@@ -69,19 +69,17 @@ dots: true,
 
 /*言語プルダウン*/
 $(document).ready(function() {
-  $('.top-language').click(function(e) {
+  $('.top-language,.top-language-sp').click(function(e) {
     $('.top-language-box').toggle();
     e.stopPropagation();
   });
 
-  $('.top-language-box-item').click(function() {
+  /*$('.top-language-box-item').click(function() {
     $('.top-language-box-item').removeClass('highlight');
     $('.selected-language').removeClass('highlight');
 
     var selectedLanguage = $(this).text();
     $('.selected-language').text(selectedLanguage);
-
-    $('.selected-language').addClass('highlight');
 
     $('.top-language-box').hide();
   });
@@ -90,7 +88,14 @@ $(document).ready(function() {
     $('.top-language-box').hide();
     $('.top-language-box-item').removeClass('highlight');
     $('.selected-language').removeClass('highlight');
+  });*/
+});
+
+$(document).ready(function() {
+  $('.top-language-list').click(function() {
+    $(this).toggleClass('top-language-list-open');
   });
 });
+
 
 
