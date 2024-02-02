@@ -73,22 +73,6 @@ $(document).ready(function() {
     $('.top-language-box').toggle();
     e.stopPropagation();
   });
-
-  /*$('.top-language-box-item').click(function() {
-    $('.top-language-box-item').removeClass('highlight');
-    $('.selected-language').removeClass('highlight');
-
-    var selectedLanguage = $(this).text();
-    $('.selected-language').text(selectedLanguage);
-
-    $('.top-language-box').hide();
-  });
-
-  $(document).click(function() {
-    $('.top-language-box').hide();
-    $('.top-language-box-item').removeClass('highlight');
-    $('.selected-language').removeClass('highlight');
-  });*/
 });
 
 $(document).ready(function() {
@@ -97,5 +81,8 @@ $(document).ready(function() {
   });
 });
 
-
-
+$(document).ready(function() {
+  $('.selected-language').click(function() {
+    $(this).toggleClass('active');
+  });
+});
