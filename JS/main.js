@@ -59,9 +59,8 @@ $('.slider').not('.slick-initialized').slick({
   prevArrow: '<div class="slick-prev"></div>',
   nextArrow: '<div class="slick-next"></div>',
 });
-
 $('.slider').not('.slick-initialized').slick({
-dots: true,
+  dots: true,
   pauseOnFocus: false,
   pauseOnHover: false,
   pauseOnDotsHover: false,
@@ -86,3 +85,5 @@ $(document).ready(function() {
     $(this).toggleClass('active');
   });
 });
+
+/**/
