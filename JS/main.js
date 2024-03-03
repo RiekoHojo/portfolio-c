@@ -24,18 +24,18 @@ $(function() {
   $btn.hide();
 
   function checkIfInView() {
-      var windowHeight = $(window).height();
-      var scrollPos = $(window).scrollTop();
-      var triggerPos = $trigger.offset().top;
+    var windowHeight = $(window).height();
+    var scrollPos = $(window).scrollTop();
+    var triggerPos = $trigger.offset().top;
 
-      if (scrollPos + windowHeight > triggerPos) {
-      $btn.fadeIn(200);
-      }
+    if (scrollPos + windowHeight > triggerPos) {
+    $btn.fadeIn(200);
+    }
 
-      clearTimeout(scrollTimer);
-      scrollTimer = setTimeout(function() {
-      $btn.fadeOut(200);
-      }, 2000);
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function() {
+    $btn.fadeOut(200);
+    }, 2000);
   }
   
   $(window).on('scroll resize', checkIfInView);
@@ -63,7 +63,7 @@ $(function() {
     pauseOnFocus: false,
     pauseOnHover: false,
     pauseOnDotsHover: false
-  }
+  });
 });
 
 
