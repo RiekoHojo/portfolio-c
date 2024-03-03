@@ -4,13 +4,13 @@ console.log("test")
 $(".top-hamburger-icon").on('click', function(){
   if($(this).hasClass('active')){
     $(this).removeClass('active');
-    $('.top-nav-sp').removeClass('open');
-    $('.top-language-sp').removeClass('open'); // top-language-spの表示切り替え
+    $('.top-nav').removeClass('open');
+    $('.top-language').removeClass('open');
     $('body').removeClass('no-scroll'); 
   } else {
     $(this).addClass('active');
-    $('.top-nav-sp').addClass('open');
-    $('.top-language-sp').addClass('open'); // top-language-spの表示切り替え
+    $('.top-nav').addClass('open');
+    $('.top-language').addClass('open');
     $('body').addClass('no-scroll');
   }
 });
@@ -48,7 +48,7 @@ $(function() {
 });
 
 /*slick slide*/
-$('.slider').not('.slick-initialized').slick({
+/*$('.slider').not('.slick-initialized').slick({
   autoplay: true,
   autoplaySpeed: 3000,
   speed:1000,
@@ -64,11 +64,27 @@ $('.slider').not('.slick-initialized').slick({
   pauseOnFocus: false,
   pauseOnHover: false,
   pauseOnDotsHover: false,
+});*/
+$('.slider').slick({
+  autoplay: true,
+  autoplaySpeed: 3000,
+  speed: 1000,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow: '<div class="slick-prev"></div>',
+  nextArrow: '<div class="slick-next"></div>',
+  dots: true,
+  pauseOnFocus: false,
+  pauseOnHover: false,
+  pauseOnDotsHover: false
 });
 
+
 /*言語プルダウン*/
-$(document).ready(function() {
-  $('.top-language,.top-language-sp').click(function(e) {
+/*$(document).ready(function() {
+  $('.top-language').click(function(e) {
     $('.top-language-box').toggle();
     e.stopPropagation();
   });
@@ -84,6 +100,48 @@ $(document).ready(function() {
   $('.selected-language').click(function() {
     $(this).toggleClass('active');
   });
+});*/
+
+$(document).ready(function() {
+  console.log(".top-language");
+
+  $('.top-language').click(function(e) {
+    $('.top-language-box').toggle();
+    e.stopPropagation();
+  });
+
+  $('.top-language-list').click(function() {
+    $(this).toggleClass('top-language-list-open');
+  });
+
+  $('.selected-language').click(function() {
+    $(this).toggleClass('active');
+  });
 });
 
-/**/
+
+
+/*ふわっと出現*/
+window.addEventListener("load", function() {
+const target = document.querySelectorAll('.scr-target')
+const targetArray = Array.prototype.slice.call(target);
+const options = {
+    root: null,
+    rootMargin: '0px 0px',
+    threshold: 0.2
+};
+
+const observer = new IntersectionObserver(callback, options)
+targetArray.forEach(function (tgt) {
+  observer.observe(tgt)
+});
+
+function callback(entries) {
+  entries.forEach(function(entry) {
+    const target = entry.target;
+    if (entry.isIntersecting && !target.classList.contains('is-active')) {
+      target.classList.add('is-active');
+    }
+  });
+};
+});

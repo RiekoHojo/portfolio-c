@@ -25,11 +25,16 @@ br {
 .main-contents-header {
   width: 100%;
   height: auto;
-  display: flex;
+  /*display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center;*/
   align-items: center;
   padding: 10px 0;
+}
+
+.main-contents-header-box {
+  display: flex;
+  justify-content: center;
 }
 
 .top-nav {
@@ -37,9 +42,9 @@ br {
   justify-content: center;
 }
 
-.top-nav-sp {
+/*.top-nav-sp {
   display: none;
-}
+}*/
 
 .top-nav li {
   font-size: 15px;
@@ -219,7 +224,7 @@ hr {
 /*slider css*/
 .slider {
   position:relative;
-    z-index: 1;
+  z-index: 1;
 }
 
 .slider-item01 {
@@ -244,6 +249,10 @@ hr {
 .slider .mainimg {
   background-size: cover;
   background-position: center;
+}
+
+.slick-dots button {
+  display: none;
 }
 
 /*矢印の設定*/
@@ -271,13 +280,13 @@ hr {
 }
 
 /*言語設定*/
-.top-language-sp {
+/*.top-language-sp {
   display: none;
-}
+}*/
 
 .top-language {
   width: 90px;
-  margin: 15px 0 0 700px;
+  margin: 15px 0 0 850px;
 }
 
 .top-language-list {
@@ -329,6 +338,69 @@ hr {
   transform: translateY(-50%) rotate(-45deg);
 }
 
+/*.top-language {
+  width: 90px;
+  margin: 15px 0 0 700px;
+}
+
+.top-language-list {
+  position: relative;
+  text-align: center;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+.selected-language, .top-language-box-item {
+  display: block;
+  width: 90px;
+  padding: 0 45px;
+  border: 1px solid #ccc;
+  background-color: #FFF;
+  margin: 0 auto; /* 中央寄せ 
+}*/
+
+.selected-language.active {
+  background-color: #ccc;
+}
+
+.top-language-box-item {
+  border-top: 0;
+}
+
+.top-language-box {
+  display: none;
+  position: absolute;
+  width: 90px;
+  z-index: 1;
+}
+  
+.top-language-list::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  width: 6px;
+  height: 6px;
+}
+  
+.top-language-list-open::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/**/
+/*.main-contents-wrap {
+  opacity: 0;
+}*/
+.main-contents-wrap.is-active {
+  opacity: 1;
+  transition: 1.5s;
+}
+
+
 @media (max-width: 980px) {
   .main-contents-holder {
     width: 980px;
@@ -343,30 +415,29 @@ hr {
 
 @media (max-width: 767px) {
   /*言語設定*/
-  .top-language {
+  /*.top-language {
     display: none;
-  }
-  .top-language-sp {
+  }*/
+  .top-language {
     width: 100px;
     height: 30px;
     border: solid 1px #ccc;
-    margin: 15px 0 0 700px;
+    margin: 30px 120px 0 700px;
     position: fixed;
     cursor: pointer;
     display: block;
     /*font-size: 30px;*/
     z-index: 1050;
-    margin: 30px 0 0 160px;
     top: -100%;
     opacity: 0;
     transition: top 1.5s;
     transform: translateY(-20px);
   }
-  .top-language-sp.open {
+  .top-language.open {
     top: 0;
     opacity: 1;
   }
-  .top-language-sp::after {
+  .top-language::after {
     content: '';
     display: inline-block;
     position: absolute;
@@ -384,7 +455,7 @@ hr {
     width: 100px;
     height: 30px;
     padding-right: 45px;
-    padding-left: 20px;
+    padding-top: 8px;
     border: 1px solid #ccc;
     margin: 0;
   }
@@ -406,6 +477,10 @@ hr {
     display: flex;
     justify-content: flex-end;
     padding: 0;
+  }
+  .main-contents-header-box {
+    display: contents;
+    width: 100%;
   }
   .main-contents-main {
     width: 100%;
@@ -519,7 +594,7 @@ hr {
   .top-nav-item:hover {
     text-decoration: none; 
   }
-  .top-nav-sp.open .top-nav-item:first-child {
+  .top-nav.open .top-nav-item:first-child {
     color: #ccc;
   }
   .top-icon {
@@ -534,6 +609,9 @@ hr {
   }
   .top-nav {
     display: none;
+  }
+  .top-nav li {
+    font-size: 17px;
   }
   .top-hamburger {
     display: block;
@@ -598,7 +676,7 @@ hr {
   .top-hamburger-icon.active span:nth-of-type(2) {
     opacity: 0;
   }
-  .top-nav-sp {
+  .top-nav {
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -613,7 +691,7 @@ hr {
     transform: translateY(-20px); 
     z-index: 900;
   }
-  .top-nav-sp.open {
+  .top-nav.open {
     top: 0;
     opacity: 1;
     transform: translateY(0);
@@ -682,6 +760,7 @@ hr {
       display:block;
       border-radius:50%;
       background:#ccc;
+      z-index: 500;
   }
   .slick-dots .slick-active button{
     background-color: transparent;
@@ -694,5 +773,15 @@ hr {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+  /**/
+  /*.main-contents-wrap,
+  .main-contents-top {
+    opacity: 0;
+  }*/
+  .main-contents-wrap,
+  .main-contents-top.is-active {
+    opacity: 1;
+    transition: 1.5s;
   }
 }
