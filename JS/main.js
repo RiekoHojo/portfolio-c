@@ -67,26 +67,6 @@ $(function() {
 
 
 /*言語プルダウン*/
-/*$(document).ready(function() {
-  $('.top-language').click(function(e) {
-    $('.top-language-box').toggle();
-    e.stopPropagation();
-  });
-});
-
-$(document).ready(function() {
-  $('.top-language-list').click(function() {
-    $(this).toggleClass('top-language-list-open');
-  });
-});
-
-$(document).ready(function() {
-  $('.selected-language').click(function() {
-    $(this).toggleClass('active');
-  });
-});*/
-
-
 $(document).ready(function() {
   console.log(".top-language");
 
