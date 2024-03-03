@@ -58,29 +58,12 @@ $('.slider').slick({
   arrows: true,
   prevArrow: '<div class="slick-prev"></div>',
   nextArrow: '<div class="slick-next"></div>',
-  dots: true,
+  dots: true,  // ここでdotsをtrueに設定
   pauseOnFocus: false,
   pauseOnHover: false,
   pauseOnDotsHover: false
 });
 
-/*$('.slider').not('.slick-initialized').slick({
-  autoplay: true,
-  autoplaySpeed: 3000,
-  speed:1000,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: true,
-  prevArrow: '<div class="slick-prev"></div>',
-  nextArrow: '<div class="slick-next"></div>',
-});
-$('.slider').not('.slick-initialized').slick({
-  dots: true,
-  pauseOnFocus: false,
-  pauseOnHover: false,
-  pauseOnDotsHover: false,
-});*/
 
 
 /*言語プルダウン*/
