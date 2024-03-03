@@ -524,9 +524,6 @@ hr {
   .main-contents-title.padding2 {
     padding: 180px 0 50px;
   }
-  .main-contents-box {
-     /*gap: 110px;*/
-  }
   .main-contents-text {
     font-size: 3vw;
     letter-spacing: 6px;
