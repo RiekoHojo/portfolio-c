@@ -1,5 +1,3 @@
-console.log("test")
-
 /*ハンバーガー　メニュー表示*/
 $(".top-hamburger-icon").on('click', function(){
   if($(this).hasClass('active')){
@@ -105,8 +103,6 @@ $(document).ready(function() {
     $(this).toggleClass('active');
   });
 });
-
-
 
 /*ふわっと出現*/
 window.addEventListener("load", function() {
