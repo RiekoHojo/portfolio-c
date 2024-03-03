@@ -64,8 +64,6 @@ $(function() {
   });
 });
 
-
-
 /*言語プルダウン*/
 $(document).ready(function() {
   console.log(".top-language");
