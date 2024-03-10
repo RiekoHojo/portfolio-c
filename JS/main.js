@@ -65,7 +65,22 @@ $(function() {
 });
 
 /*言語プルダウン*/
-$(document).ready(function() {
+$('.top-language').click(function(e) {
+  console.log("クリック01");
+    $('.top-language-box').toggle();
+    e.stopPropagation();
+});
+  
+$('.top-language-list').click(function() {
+  console.log("クリック02");
+  $(this).toggleClass('top-language-list-open');
+});
+  
+$('.selected-language').click(function() {
+  console.log("クリック03");
+    $(this).toggleClass('active');
+});
+/*$(document).ready(function() {
   console.log(".top-language");
 
   $('.top-language').click(function(e) {
@@ -80,7 +95,7 @@ $(document).ready(function() {
   $('.selected-language').click(function() {
     $(this).toggleClass('active');
   });
-});
+});*/
 
 /*ふわっと出現*/
 window.addEventListener("load", function() {
