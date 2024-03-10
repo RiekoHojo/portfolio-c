@@ -174,6 +174,10 @@ br {
   padding-top: 30px;
 }
 
+.main-contents-mainimg {
+  height: 449px;
+}
+
 .main-contents-info {
   display: flex;
   border-bottom: 1px solid #333;
