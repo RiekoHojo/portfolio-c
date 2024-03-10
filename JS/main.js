@@ -27,12 +27,12 @@ $(function() {
     var triggerPos = $trigger.offset().top;
 
     if (scrollPos + windowHeight > triggerPos) {
-    $btn.fadeIn(200);
+      $btn.fadeIn(200);
     }
 
     clearTimeout(scrollTimer);
     scrollTimer = setTimeout(function() {
-    $btn.fadeOut(200);
+      $btn.fadeOut(200);
     }, 2000);
   }
   
