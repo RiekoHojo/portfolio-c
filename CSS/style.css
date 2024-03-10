@@ -249,10 +249,7 @@ hr {
 .slider .mainimg {
   background-size: cover;
   background-position: center;
-}
-
-.mainimg {
-  height: 449px;
+  height: 450px;
 }
 
 .slick-dots button {
@@ -404,8 +401,7 @@ hr {
   transition: 1.5s;
 }
 
-
-@media (max-width: 980px) {
+*@media (max-width: 980px) {
   .main-contents-holder {
     width: 980px;
   }
@@ -490,7 +486,7 @@ hr {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top:  150px;
+    padding-top:  100px;
   }
   .mainimg {
     width: 100%;
@@ -738,6 +734,9 @@ hr {
     border-right: 0.05em solid #000;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
+  }
+  .slider .mainimg {
+    height: 200px;
   }
   .slick-prev, 
   .slick-next {
