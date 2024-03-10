@@ -736,9 +736,9 @@ hr {
     transform: rotate(-45deg);
   }
   .slider .mainimg {
-    height: 450px;
+    height: 200px;
   }
-  
+
   .slick-prev, 
   .slick-next {
     display: none;
