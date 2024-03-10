@@ -249,7 +249,10 @@ hr {
 .slider .mainimg {
   background-size: cover;
   background-position: center;
-  min-height: 300px;
+}
+
+.mainimg {
+  height: 449px;
 }
 
 .slick-dots button {
