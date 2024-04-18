@@ -71,31 +71,12 @@ $('.top-language').click(function(e) {
     e.stopPropagation();
 });
   
-$('.top-language-list').click(function() {
-  console.log("クリック02");
-  $(this).toggleClass('top-language-list-open');
+$('.top-language-box-item').click(function(e) {
+  e.stopPropagation();
+  var language = $(this).text();
+  $('.selected-language').text(language);
+  $('.top-language-box').toggle();
 });
-  
-$('.selected-language').click(function() {
-  console.log("クリック03");
-    $(this).toggleClass('active');
-});
-/*$(document).ready(function() {
-  console.log(".top-language");
-
-  $('.top-language').click(function(e) {
-    $('.top-language-box').toggle();
-    e.stopPropagation();
-  });
-
-  $('.top-language-list').click(function() {
-    $(this).toggleClass('top-language-list-open');
-  });
-
-  $('.selected-language').click(function() {
-    $(this).toggleClass('active');
-  });
-});*/
 
 /*ふわっと出現*/
 window.addEventListener("load", function() {

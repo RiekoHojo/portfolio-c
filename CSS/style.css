@@ -491,12 +491,12 @@ hr {
   }
   .main-contents-text {
     font-size: 3vw;
-    letter-spacing: 6px;
+    letter-spacing: 1px;
     line-height: 1.6em;
     padding: 0 0 80px;
   }
   .main-contents-text.space {
-    letter-spacing: 6px;
+    letter-spacing: 1px;
     line-height: 2em;
     padding: 20px;
     padding: 10px 0px 20px;
@@ -713,7 +713,7 @@ hr {
     position: relative;
     z-index: 3;
       text-align:center;
-    margin:-50px 0 0 0;
+    margin:-40px 0 0 0;
   }
   .slick-dots li {
       display:inline-block;
