@@ -47,7 +47,7 @@ $(function() {
 
 /*slick slide*/
 $(function() {
-  $('.slider').slick({
+  var sliderOptions = {
     autoplay: true,
     autoplaySpeed: 3000,
     speed: 1000,
@@ -61,8 +61,20 @@ $(function() {
     pauseOnFocus: false,
     pauseOnHover: false,
     pauseOnDotsHover: false
-  });
+  };
+
+  $(window).on('resize', function() {
+    if ($(window).width() <= 767) {
+      sliderOptions.fade = false; // SPサイズフェードしない
+    } else {
+      sliderOptions.fade = true; // PCサイズフェード
+    }
+  }).resize(); 
+
+  $('.slider').slick(sliderOptions);
 });
+
+
 
 /*言語プルダウン*/
 $('.top-language').click(function(e) {
