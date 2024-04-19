@@ -703,7 +703,8 @@ hr {
   .slider .mainimg {
     height: 200px;
   }
-  .slick-prev {
+  .slick-prev,
+  .slick-next {
     display: none;
   }
   .slick-next {
@@ -750,8 +751,5 @@ hr {
   .main-contents-top.is-active {
     opacity: 1;
     transition: 1.5s;
-  }
-  .slick-prev {
-    display: none;
   }
 }
