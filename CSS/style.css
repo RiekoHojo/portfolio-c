@@ -751,4 +751,7 @@ hr {
     opacity: 1;
     transition: 1.5s;
   }
+  .slick-prev {
+    display: none;
+  }
 }
