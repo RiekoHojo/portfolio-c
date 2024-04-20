@@ -77,7 +77,7 @@ $(function() {
 
 
 /*言語プルダウン*/
-$('.top-language').click(function(e) {
+/*$('.top-language').click(function(e) {
   console.log("クリック01");
     $('.top-language-box').toggle();
     e.stopPropagation();
@@ -88,7 +88,9 @@ $('.top-language-box-item').click(function(e) {
   var language = $(this).text();
   $('.selected-language').text(language);
   $('.top-language-box').toggle();
-});
+});*/
+
+
 
 /*ふわっと出現*/
 window.addEventListener("load", function() {
