@@ -25,6 +25,13 @@ br {
 .main-contents-header {
   width: 100%;
   height: auto;
+  position: fixed;
+  top: 5px;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1000;
+  background-color: transparent;
   /*display: flex;
   flex-wrap: wrap;
   justify-content: center;*/
@@ -53,7 +60,7 @@ br {
 
 .top-nav-item {
   margin: 0 25px;
-  text-shadow: 2px 2px 0 #ffff;
+  text-shadow: 1px 0 #FFFFFF, -1px 0 #FFFFFF, 0 1px #FFFFFF, 0 -1px #FFFFFF;
   position: relative;
   letter-spacing: 4px;
   cursor: pointer;
@@ -158,7 +165,7 @@ br {
 .main-contents-subtext {
   font-size: 12px;
   letter-spacing: 0.2em;
-  padding: 0 0 30px;
+  padding: 10px 0 30px;
 }
 
 .main-contents-subtitle {
