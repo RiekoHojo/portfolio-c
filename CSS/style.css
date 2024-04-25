@@ -16,6 +16,17 @@ br {
   margin: 5px 0;
 }
 
+.inview {
+  transform: translateY(1px);
+  opacity: 0;
+  transition: transform 4s, opacity 4s;
+}
+
+.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .main-contents-holder {
   margin-bottom: 100px;
   background-color: #FFF;
@@ -184,16 +195,17 @@ br {
 .main-contents-info {
   display: flex;
   border-bottom: 1px solid #333;
+  margin-top: 100px;
 }
 
 .main-contents-infodate {
-  margin-left: 30px;
+  margin-left: 70px;
   font-size: 14px;
 }
 
 .main-contents-infotext {
-  margin:0 0 30px 30px;
-  font-size: 14px;
+  margin:0 0 40px 50px;
+  font-size: 15px;
   text-decoration: underline;
 }
 
@@ -293,56 +305,38 @@ hr {
 }
 
 .top-language-list {
-  width: 100%;
-  border: 1px solid #ccc;
-  background-color: #FFF;
-  cursor: pointer;
-  position: relative;
-  text-align: left;
-  padding-left: 15px;
-}
-
-.top-language-list::after {
-  content: '';
-  display: block;
-  position: absolute;
-  right: 10px;
-  top: 70%;
-  transform: translateY(-50%) rotate(135deg);
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
-  width: 6px;
-  height: 6px;
-  pointer-events: none;
-}
-
-.top-language {
-  width: 90px;
-  margin: 15px 0 0 850px;
-}
-
-/*.top-language-list {
   position: relative;
   text-align: center;
   background-color: #FFF;
   cursor: pointer;
 }
 
-.selected-language, .top-language-box-item {
+.selected-language-list {
   display: block;
   width: 90px;
   padding-right: 45px;
   border: 1px solid #ccc;
   background-color: #FFF;
   margin: 0;
-}*/
+  cursor: pointer;
+}
 
-.selected-language.active {
+.selected-language-list.active {
   background-color: #ccc;
 }
 
-/*.top-language-box-item {
-  border-top: 0;
+.top-language-list::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  top: 44%;
+  transform: translateY(-50%) rotate(135deg);
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: none; 
+  width: 9px;
+  height: 9px;
 }
 
 .top-language-box {
@@ -351,56 +345,6 @@ hr {
   z-index: 1;
   border-top: none;
 }
-
-.top-language-list::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%) rotate(135deg);
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
-  border-bottom: none; 
-  width: 6px;
-  height: 6px;
-}
-
-.top-language-list-open::after {
-  transform: translateY(-50%) rotate(-45deg);
-}
-
-.selected-language.active {
-  background-color: #ccc;
-}
-
-.top-language-box-item {
-  border-top: 0;
-}
-
-.top-language-box {
-  display: none;
-  position: absolute;
-  width: 90px;
-  z-index: 1;
-}
-  
-.top-language-list::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%) rotate(135deg);
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
-  width: 6px;
-  height: 6px;
-}
-  
-.top-language-list-open::after {
-  transform: translateY(-50%) rotate(-45deg);
-}*/
 
 .main-contents-wrap.is-active {
   opacity: 1;
@@ -421,29 +365,6 @@ hr {
 
 @media (max-width: 767px) {
   .top-language {
-    width: 100px;
-    margin: 30px 0 0;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%) translateY(-20px);
-    cursor: pointer;
-    z-index: 1050;
-    top: -100%;
-    opacity: 0;
-    transition: top 1.5s, opacity 1.5s ease-in-out;
-  }
-  .top-language-list {
-    width: 100%;
-    height: 30px;
-    border: solid 1px #ccc;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-  /*.top-language {
-    width: 100px;
-    height: 30px;
-    border: solid 1px #ccc;
     margin: 30px 120px 0 700px;
     position: fixed;
     cursor: pointer;
@@ -453,7 +374,7 @@ hr {
     opacity: 0;
     transition: top 1.5s;
     transform: translateY(-20px);
-  }*/
+  }
   .top-language.open {
     top: 0;
     opacity: 1;
@@ -462,23 +383,23 @@ hr {
     content: '';
     display: inline-block;
     position: absolute;
-    right: 25px;
-    top: 45%;
+    right: 15px;
+    top: 44%;
     transform: translateY(-50%) rotate(135deg);
-    border-top: 2px solid #000;
-    border-right: 2px solid #000;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
     border-bottom: none; 
-    width: 3vw;
-    height: 3vw;
+    width: 9px;
+    height: 9px;
   }
-  .selected-language, .top-language-box-item {
+  .selected-language-list {
     display: block;
     width: 100px;
     height: 30px;
     padding-right: 45px;
-    padding-top: 8px;
     border: 1px solid #ccc;
     margin: 0;
+    cursor: pointer;
   }
   .top-language-list-open::after {
     transform: translateY(-50%) rotate(-45deg);
