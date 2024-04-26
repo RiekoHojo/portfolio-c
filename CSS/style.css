@@ -171,6 +171,7 @@ br {
 .main-contents-img {
   width: 459px;
   border-radius: 40px;
+  cursor: pointer;
 }
 
 .main-contents-subtext {
