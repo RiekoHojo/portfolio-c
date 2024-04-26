@@ -46,7 +46,7 @@ $(function() {
 });
 
 /*slick slide*/
-$(function() {
+/*$(function() {
   var sliderOptions = {
     autoplay: true,
     autoplaySpeed: 3000,
@@ -72,7 +72,36 @@ $(function() {
   }).resize(); 
 
   $('.slider').slick(sliderOptions);
+});*/
+$(function() {
+  var sliderOptions = {
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 1000,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: '<div class="slick-prev"></div>',
+    nextArrow: '<div class="slick-next"></div>',
+    dots: true,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    pauseOnDotsHover: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false, // 矢印を非表示
+          fade: false
+        }
+      }
+    ]
+  };
+
+  $('.slider').slick(sliderOptions);
 });
+
 
 /*言語プルダウン*/
 /*$('.top-language').click(function(e) {
