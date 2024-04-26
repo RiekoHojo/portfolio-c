@@ -99,6 +99,14 @@ $(function() {
     ]
   };
 
+  $(window).on('resize', function() {
+    if ($(window).width() <= 767) {
+      sliderOptions.fade = false; // SPサイズフェードしない
+    } else {
+      sliderOptions.fade = true; // PCサイズフェード
+    }
+  }).resize(); 
+
   $('.slider').slick(sliderOptions);
 });
 
