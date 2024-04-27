@@ -352,7 +352,7 @@ hr {
   transition: 1.5s;
 }
 
-@media (max-width: 980px) {
+/*@media (max-width: 980px) {
   .main-contents-holder {
     width: 980px;
   }
@@ -362,7 +362,7 @@ hr {
     object-fit: cover;
     object-position: center 80%;
   }
-}
+}*/
 
 @media (max-width: 767px) {
   .top-language {
@@ -682,8 +682,8 @@ hr {
   .slider .mainimg {
     height: 200px;
   }
-  .slick-prev,
-  .slick-next {
+  .main-contents-mainimg .slick-prev,
+  .main-contents-mainimg .slick-next {
     display: none;
   }
   .slick-dots {
