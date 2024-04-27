@@ -60,23 +60,19 @@ $(function() {
     dots: true, 
     pauseOnFocus: false,
     pauseOnHover: false,
-    pauseOnDotsHover: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          fade: false 
-      }
-    ]
+    pauseOnDotsHover: false
   };
 
-  $(window).on('resize', function() {
-  }).resize(); 
+$(window).on('resize', function() {
+    if ($(window).width() <= 767) {
+      sliderOptions.fade = false;
+      } else {
+        sliderOptions.fade = true; 
+      }
+    }).resize(); 
 
   $('.slider').slick(sliderOptions);
 });
-
 
 
 /*言語プルダウン*/
