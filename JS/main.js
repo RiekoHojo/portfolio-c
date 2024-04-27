@@ -60,19 +60,23 @@ $(function() {
     dots: true, 
     pauseOnFocus: false,
     pauseOnHover: false,
-    pauseOnDotsHover: false
+    pauseOnDotsHover: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          fade: false 
+      }
+    ]
   };
 
   $(window).on('resize', function() {
-    if ($(window).width() <= 767) {
-      sliderOptions.fade = false; // SPサイズフェードしない
-    } else {
-      sliderOptions.fade = true; // PCサイズフェード
-    }
   }).resize(); 
 
   $('.slider').slick(sliderOptions);
 });
+
 
 
 /*言語プルダウン*/

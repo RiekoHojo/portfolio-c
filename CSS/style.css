@@ -684,8 +684,7 @@ hr {
   }
   .main-contents-mainimg .slick-prev,
   .main-contents-mainimg .slick-next {
-    display: none !important;
-  };
+    display: none;
   }
   .slick-dots {
     position: relative;
