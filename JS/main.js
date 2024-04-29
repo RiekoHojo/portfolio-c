@@ -46,34 +46,6 @@ $(function() {
 });
 
 /*slick slide*/
-/*$(function() {
-  var sliderOptions = {
-    autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 1000,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    prevArrow: '<div class="slick-prev"></div>',
-    nextArrow: '<div class="slick-next"></div>',
-    dots: true, 
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    pauseOnDotsHover: false
-  };
-
-$(window).on('resize', function() {
-    if ($(window).width() <= 767) {
-      sliderOptions.fade = false;
-      } else {
-        sliderOptions.fade = true; 
-      }
-    }).resize(); 
-
-  $('.slider').slick(sliderOptions);
-});*/
-
 $(function() {
   var sliderOptions = {
     autoplay: true,
@@ -125,31 +97,7 @@ $('.top-language-box-item').click(function(e) {
 });*/
 
 /*ふわっと出現*/
-/*window.addEventListener("load", function() {
-const target = document.querySelectorAll('.scr-target')
-const targetArray = Array.prototype.slice.call(target);
-const options = {
-    root: null,
-    rootMargin: '0px 0px',
-    threshold: 0.2
-};
-
-const observer = new IntersectionObserver(callback, options)
-targetArray.forEach(function (tgt) {
-  observer.observe(tgt)
-});
-
-function callback(entries) {
-  entries.forEach(function(entry) {
-    const target = entry.target;
-    if (entry.isIntersecting && !target.classList.contains('is-active')) {
-      target.classList.add('is-active');
-    }
-  });
-};
-});*/
-
-$(window).on('scroll', function () {
+function checkInView() {
   $('.inview').each(function() {
     var targetPosition = $(this).offset().top;
     var scroll = $(window).scrollTop();
@@ -158,15 +106,14 @@ $(window).on('scroll', function () {
       $(this).addClass('show');
     }
   });
+}
+
+$(document).ready(function() {
+  // ページ読み込み時に一度実行
+  checkInView();
 });
 
-$(window).on('scroll', function () {
-  $('.inview').each(function() {
-    var targetPosition = $(this).offset().top;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll > targetPosition - windowHeight) {
-      $(this).addClass('show');
-    }
-  });
+$(window).on('scroll', function() {
+  // スクロール時に実行
+  checkInView();
 });
