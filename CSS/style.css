@@ -28,6 +28,7 @@ br {
 }
 
 .main-contents-holder {
+  /*min-width: 1200px;*/
   margin-bottom: 100px;
   background-color: #FFF;
   width: 100%;
@@ -243,6 +244,7 @@ hr {
 
 /*slider css*/
 .slider {
+  width: 100%;
   position:relative;
   z-index: 1;
 }
