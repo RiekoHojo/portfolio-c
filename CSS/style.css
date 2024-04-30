@@ -313,6 +313,7 @@ hr {
   background-color: #FFF;
   margin: 0;
   cursor: pointer;
+  padding-left: 20px;
 }
 
 .selected-language-list.active {
