@@ -5,8 +5,7 @@
 .main-contents-subtitle,
 .main-contents-infodate,
 .main-contents-infotext,
-.bottom-nav-item,
-.top-language-box {
+.bottom-nav-item {
   font-family: 'Mulish', sans-serif;
   font-weight: bold;
 }
@@ -397,14 +396,15 @@ hr {
     margin: 0;
     cursor: pointer;
   }
+  select{
+    padding-left: 20px;
+    font-family: 'Mulish', sans-serif;
+  }
   .top-language-list-open::after {
     transform: translateY(-50%) rotate(-45deg);
   }
   .top-language-list::after {
     display: none;
-  }
-  .top-language-box {
-    padding-left: 10px;
   }
   hr {
     margin: 0;
