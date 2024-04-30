@@ -6,7 +6,7 @@
 .main-contents-infodate,
 .main-contents-infotext,
 .bottom-nav-item,
-.selected-language-list {
+.top-language-box {
   font-family: 'Mulish', sans-serif;
   font-weight: bold;
 }
@@ -402,6 +402,9 @@ hr {
   }
   .top-language-list::after {
     display: none;
+  }
+  .top-language-box {
+    padding-left: 10px;
   }
   hr {
     margin: 0;
