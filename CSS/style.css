@@ -5,7 +5,8 @@
 .main-contents-subtitle,
 .main-contents-infodate,
 .main-contents-infotext,
-.bottom-nav-item {
+.bottom-nav-item,
+.selected-language-list {
   font-family: 'Mulish', sans-serif;
   font-weight: bold;
 }
@@ -347,7 +348,7 @@ hr {
 
 @media (max-width: 980px) {
   .main-contents-holder {
-    width: 980px;
+    width: 1200px;
     min-width: 1200px;
   }
   .mainimg {
@@ -415,6 +416,7 @@ hr {
     display: flex;
     justify-content: flex-end;
     padding: 0;
+    position: absolute;
   }
   .main-contents-header-box {
     display: contents;
@@ -486,11 +488,11 @@ hr {
     padding-bottom: 10px;
   }
   .main-contents-infobox {
-    width: 100%;
     padding-top: 0;
   }
   .main-contents-info {
     display: block;
+    margin-top: 10px;
   }
   .main-contents-infobox > li.main-contents-info:not(:first-child) {
     margin-top: 60px;
